@@ -1,9 +1,10 @@
 extends CharacterBody2D
-
+class_name apple
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var health = 10
+
 
 
 func _physics_process(delta: float) -> void:
@@ -22,6 +23,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+
 
 
 	
