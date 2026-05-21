@@ -6,11 +6,15 @@
 [node name="Level 1" type="Node2D" unique_id=911778341]
 
 [node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
-position = Vector2(255.99998, 453.99997)
+position = Vector2(313, 284.00003)
+rotation = 0.6370179
 
 [node name="Branches" parent="." unique_id=660265266 instance=ExtResource("1_dilhk")]
 position = Vector2(629.99994, 245.99998)
+rotation = -0.4476069
+scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_n0qsc")]
+position = Vector2(604, -27)
 
 [node name="Camera2D" type="Camera2D" parent="Apple" unique_id=78760015]
