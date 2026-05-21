@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c13wixnfn5w4a"]
+
+[ext_resource type="Script" uid="uid://dt5ujtjkyfjtd" path="res://Key elements/apple.gd" id="1_x7be1"]
+[ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="2_kuhjn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt6km"]
+size = Vector2(126, 128)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2030887307]
+position = Vector2(550, 30)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_x7be1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=195528658]
+position = Vector2(71, 69)
+texture = ExtResource("2_kuhjn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=537819501]
+position = Vector2(71, 68)
+shape = SubResource("RectangleShape2D_rt6km")

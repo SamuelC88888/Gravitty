@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://be0ilauol14uk"]
+
+[ext_resource type="Script" uid="uid://cealq3dd8d5a0" path="res://Levels/start_screens.gd" id="1_en1eo"]
+
+[node name="Start Screens" type="Node2D" unique_id=1292311866]
+script = ExtResource("1_en1eo")
+
+[node name="Button" type="Button" parent="." unique_id=471879442]
+offset_left = 345.0
+offset_top = 3.0
+offset_right = 772.0
+offset_bottom = 171.0
+text = "Level 1"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
