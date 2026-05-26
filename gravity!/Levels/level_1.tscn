@@ -2,14 +2,60 @@
 
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="1_dilhk"]
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_n0qsc"]
+[ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_3mhv4"]
+[ext_resource type="Script" uid="uid://b8kp86rh5ujbk" path="res://Levels/area_2d.gd" id="4_rf6l5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6l5"]
+size = Vector2(88, 6874)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syshm"]
+size = Vector2(1169, 155)
 
 [node name="Level 1" type="Node2D" unique_id=911778341]
 
+[node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
+position = Vector2(363, 543)
+
 [node name="Branches" parent="." unique_id=660265266 instance=ExtResource("1_dilhk")]
-position = Vector2(829, 349.00003)
+position = Vector2(885, 290)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_n0qsc")]
 position = Vector2(856, 112)
 slide_on_ceiling = false
+
+[node name="Wall 1" type="StaticBody2D" parent="." unique_id=635670600]
+position = Vector2(0, 21)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 1" unique_id=2029284276]
+position = Vector2(1382, 3431)
+shape = SubResource("RectangleShape2D_rf6l5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall 1" unique_id=1686408268]
+position = Vector2(1383.5, 3430.5)
+scale = Vector2(0.7265625, 53.695313)
+texture = ExtResource("3_3mhv4")
+
+[node name="Wall 2" type="StaticBody2D" parent="." unique_id=1465877994]
+position = Vector2(-1061, 3)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 2" unique_id=1405592477]
+position = Vector2(1382, 3431)
+shape = SubResource("RectangleShape2D_rf6l5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall 2" unique_id=300784082]
+position = Vector2(1383.5, 3430.5)
+scale = Vector2(0.7265625, 53.695313)
+texture = ExtResource("3_3mhv4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1219838522]
+script = ExtResource("4_rf6l5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1284656309]
+position = Vector2(851.5, 6812.5)
+shape = SubResource("RectangleShape2D_syshm")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
