@@ -7,19 +7,46 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6l5"]
 size = Vector2(88, 6874)
 
+[sub_resource type="GDScript" id="GDScript_3mhv4"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+
+
+
+func _on_branches_healthscore() -> void:
+	text = \"health: \" + str(health)
+"
+
 [node name="Level 1" type="Node2D" unique_id=911778341]
 
-[node name="Branches4" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
-position = Vector2(371.99997, 2540.9998)
-
-[node name="Branches3" parent="." unique_id=1937150448 instance=ExtResource("1_dilhk")]
-position = Vector2(876.00006, 2069)
-
-[node name="Branches2" parent="." unique_id=257851563 instance=ExtResource("1_dilhk")]
-position = Vector2(373, 1276)
-
 [node name="Branches" parent="." unique_id=660265266 instance=ExtResource("1_dilhk")]
-position = Vector2(878.99994, 365.00003)
+position = Vector2(871.00006, 427.00006)
+rotation = -0.005030915
+scale = Vector2(0.40386674, 0.100812495)
+
+[node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
+position = Vector2(400, 900.00006)
+rotation = -0.005030915
+scale = Vector2(0.40386674, 0.100812495)
+
+[node name="Branches3" parent="." unique_id=1120271866 instance=ExtResource("1_dilhk")]
+position = Vector2(871.00006, 2002.0001)
+rotation = -0.005030915
+scale = Vector2(0.40386674, 0.100812495)
+
+[node name="Branches4" parent="." unique_id=1743989268 instance=ExtResource("1_dilhk")]
+position = Vector2(359.00003, 2783)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
@@ -54,9 +81,26 @@ scale = Vector2(0.7265625, 53.695313)
 texture = ExtResource("3_3mhv4")
 
 [node name="Label" type="Label" parent="." unique_id=564079876]
-offset_left = 894.0
-offset_top = 424.0
-offset_right = 1187.0
-offset_bottom = 475.0
+offset_left = 957.0
+offset_top = 293.0
+offset_right = 1250.0
+offset_bottom = 344.0
 theme_override_font_sizes/font_size = 30
 text = "Dont hit into these"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=960107703]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1089702842]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="health" type="Label" parent="CanvasLayer/Control" unique_id=1176811506]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 13.0
+offset_right = 660.0
+offset_bottom = 36.0
+text = "0"
+script = SubResource("GDScript_3mhv4")
