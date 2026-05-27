@@ -23,11 +23,11 @@ position = Vector2(576.9999, 64.99999)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_wgnx3")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1913906351]
+[node name="branch" type="Area2D" parent="." unique_id=1913906351]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=740267899]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="branch" unique_id=740267899]
 position = Vector2(572.4999, 54.99997)
 scale = Vector2(0.99999964, 0.99999964)
 shape = SubResource("RectangleShape2D_omt3p")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="branch" to="." method="_on_body_entered"]
