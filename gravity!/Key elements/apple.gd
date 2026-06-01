@@ -3,7 +3,9 @@ class_name apple
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-
+var maxhp = 1000
+var current_hp = 1000
+var vdamage = velocity.y
 
 
 func _physics_process(delta: float) -> void:
@@ -27,12 +29,11 @@ func _physics_process(delta: float) -> void:
 
 
 
-
-	
-
-
 	move_and_slide()
-
-
-
-		
+	
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if Area2D is Branch:
+		current_hp += -100
+		current_hp = clamp(current_hp,0,maxhp)
+		print("ouch! Hp =:",current_hp)
+	

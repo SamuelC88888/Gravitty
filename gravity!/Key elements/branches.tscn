@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="1_gn3qk"]
 [ext_resource type="Script" uid="uid://ceml0kao6q1vd" path="res://Key elements/branches.gd" id="1_wgnx3"]
+[ext_resource type="Script" uid="uid://r7gypkrcdkw8" path="res://Key elements/branch.gd" id="3_omt3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgnx3"]
 size = Vector2(1156.0001, 130)
@@ -24,6 +25,7 @@ scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_wgnx3")
 
 [node name="branch" type="Area2D" parent="." unique_id=1913906351]
+script = ExtResource("3_omt3p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="branch" unique_id=740267899]
 position = Vector2(574.99963, 60)

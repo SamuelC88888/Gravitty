@@ -4,29 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_n0qsc"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_3mhv4"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3mhv4"]
+radius = 72.02777
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6l5"]
 size = Vector2(88, 6874)
 
 [sub_resource type="GDScript" id="GDScript_3mhv4"]
-script/source = "extends Label
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-
-
-
-func _on_branches_healthscore() -> void:
-	text = \"health: \" + str(health)
-"
 
 [node name="Level 1" type="Node2D" unique_id=911778341]
 
@@ -51,8 +35,13 @@ rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_n0qsc")]
-position = Vector2(856, 112)
+position = Vector2(801, 106)
 slide_on_ceiling = false
+
+[node name="Hitbox" type="Area2D" parent="Apple" unique_id=143601617]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple/Hitbox" unique_id=909680447]
+shape = SubResource("CircleShape2D_3mhv4")
 
 [node name="Wall 1" type="StaticBody2D" parent="." unique_id=635670600]
 position = Vector2(0, 21)
@@ -104,3 +93,5 @@ offset_right = 660.0
 offset_bottom = 36.0
 text = "0"
 script = SubResource("GDScript_3mhv4")
+
+[connection signal="area_entered" from="Apple/Hitbox" to="Apple" method="_on_hitbox_area_entered"]
