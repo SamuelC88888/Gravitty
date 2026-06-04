@@ -3,12 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="1_dilhk"]
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_n0qsc"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_3mhv4"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_3mhv4"]
-radius = 72.02777
+[ext_resource type="PackedScene" uid="uid://bckaqwpm2ceai" path="res://Key elements/area_2d.tscn" id="4_rf6l5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6l5"]
-size = Vector2(88, 6874)
+size = Vector2(88, 11034.5)
 
 [sub_resource type="GDScript" id="GDScript_3mhv4"]
 
@@ -20,53 +18,48 @@ rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
-position = Vector2(400, 900.00006)
+position = Vector2(391.00003, 1474.0001)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches3" parent="." unique_id=1120271866 instance=ExtResource("1_dilhk")]
-position = Vector2(871.00006, 2002.0001)
+position = Vector2(847.00006, 2905.0002)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches4" parent="." unique_id=1743989268 instance=ExtResource("1_dilhk")]
-position = Vector2(359.00003, 2783)
+position = Vector2(341.00003, 4415)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_n0qsc")]
-position = Vector2(801, 106)
+position = Vector2(842, -445)
 slide_on_ceiling = false
 
-[node name="Hitbox" type="Area2D" parent="Apple" unique_id=143601617]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple/Hitbox" unique_id=909680447]
-shape = SubResource("CircleShape2D_3mhv4")
-
 [node name="Wall 1" type="StaticBody2D" parent="." unique_id=635670600]
-position = Vector2(0, 21)
-metadata/_edit_group_ = true
+position = Vector2(-23, 1531)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 1" unique_id=2029284276]
-position = Vector2(1382, 3431)
+position = Vector2(1382, 3040.25)
 shape = SubResource("RectangleShape2D_rf6l5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Wall 1" unique_id=1686408268]
-position = Vector2(1383.5, 3430.5)
-scale = Vector2(0.7265625, 53.695313)
+position = Vector2(1375.5, 3053.5007)
+scale = Vector2(0.8515624, 86.22656)
 texture = ExtResource("3_3mhv4")
+metadata/_edit_group_ = true
 
 [node name="Wall 2" type="StaticBody2D" parent="." unique_id=1465877994]
-position = Vector2(-1061, 3)
+position = Vector2(-1068, -552)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 2" unique_id=1405592477]
-position = Vector2(1382, 3431)
+position = Vector2(1382, 5120.5)
 shape = SubResource("RectangleShape2D_rf6l5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Wall 2" unique_id=300784082]
-position = Vector2(1383.5, 3430.5)
-scale = Vector2(0.7265625, 53.695313)
+position = Vector2(1388, 5108)
+scale = Vector2(0.65625006, 85.82813)
 texture = ExtResource("3_3mhv4")
 
 [node name="Label" type="Label" parent="." unique_id=564079876]
@@ -94,4 +87,5 @@ offset_bottom = 36.0
 text = "0"
 script = SubResource("GDScript_3mhv4")
 
-[connection signal="area_entered" from="Apple/Hitbox" to="Apple" method="_on_hitbox_area_entered"]
+[node name="Area2D" parent="." unique_id=150673469 instance=ExtResource("4_rf6l5")]
+position = Vector2(320, 10050)

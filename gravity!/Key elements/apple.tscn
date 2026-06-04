@@ -10,8 +10,6 @@ radius = 70.71068
 radius = 70.0
 
 [node name="Apple" type="CharacterBody2D" unique_id=2030887307]
-position = Vector2(550, 30)
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_x7be1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=195528658]
@@ -25,6 +23,7 @@ shape = SubResource("CircleShape2D_32yen")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=907346444]
 position = Vector2(0, -2)
+zoom = Vector2(0.2, 0.2)
 
 [node name="Apple_hitbox" type="CollisionShape2D" parent="." unique_id=537819501]
 shape = SubResource("CircleShape2D_x7be1")

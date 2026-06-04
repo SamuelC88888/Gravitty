@@ -1,4 +1,5 @@
 extends StaticBody2D
+
 const maxhealth = 3
 var health = maxhealth
 
