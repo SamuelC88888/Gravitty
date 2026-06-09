@@ -1,2 +1,2 @@
 extends Area2D
-class_name  Branch
+class_name Branch

@@ -28,7 +28,12 @@ rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches4" parent="." unique_id=1743989268 instance=ExtResource("1_dilhk")]
-position = Vector2(341.00003, 4415)
+position = Vector2(341.00003, 4732)
+rotation = -0.005030915
+scale = Vector2(0.40386674, 0.100812495)
+
+[node name="Branches5" parent="." unique_id=257793790 instance=ExtResource("1_dilhk")]
+position = Vector2(918, 7619)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
