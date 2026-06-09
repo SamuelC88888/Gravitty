@@ -18,22 +18,17 @@ rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
-position = Vector2(391.00003, 1474.0001)
+position = Vector2(306.00003, 2948.0002)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
-[node name="Branches3" parent="." unique_id=1120271866 instance=ExtResource("1_dilhk")]
-position = Vector2(847.00006, 2905.0002)
+[node name="Branches3" parent="." unique_id=436768233 instance=ExtResource("1_dilhk")]
+position = Vector2(899, 6159)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
-[node name="Branches4" parent="." unique_id=1743989268 instance=ExtResource("1_dilhk")]
-position = Vector2(341.00003, 4732)
-rotation = -0.005030915
-scale = Vector2(0.40386674, 0.100812495)
-
-[node name="Branches5" parent="." unique_id=257793790 instance=ExtResource("1_dilhk")]
-position = Vector2(918, 7619)
+[node name="Branches4" parent="." unique_id=1639432758 instance=ExtResource("1_dilhk")]
+position = Vector2(375, 9021)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
@@ -94,3 +89,5 @@ script = SubResource("GDScript_3mhv4")
 
 [node name="Area2D" parent="." unique_id=150673469 instance=ExtResource("4_rf6l5")]
 position = Vector2(320, 10050)
+
+[connection signal="branch_break" from="Apple" to="Branches" method="_on_apple_branch_break"]
