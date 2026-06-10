@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jaa2mby6t1tx"]
+
+[ext_resource type="Script" uid="uid://b3jxjgcbebxk6" path="res://loser.gd" id="1_uav2k"]
+
+[node name="Loser" type="Node2D" unique_id=251310926]
+script = ExtResource("1_uav2k")
+
+[node name="Button" type="Button" parent="." unique_id=761457205]
+offset_left = 304.0
+offset_top = 199.0
+offset_right = 841.0
+offset_bottom = 408.0
+text = "Go back to main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

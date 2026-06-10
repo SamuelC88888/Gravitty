@@ -5,26 +5,28 @@
 [ext_resource type="Script" uid="uid://bmx5ctp5dl021" path="res://Key elements/area_2d.gd" id="3_itj2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld6u2"]
-size = Vector2(127, 129)
+size = Vector2(841, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itj2y"]
-size = Vector2(128, 165)
+size = Vector2(839, 91)
 
 [node name="Safe branch" type="StaticBody2D" unique_id=678059459]
 script = ExtResource("1_ld6u2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2081460349]
+position = Vector2(355.5, 31.5)
+scale = Vector2(6.5546875, 0.5078125)
 texture = ExtResource("1_tmjar")
 flip_h = true
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1765284063]
-position = Vector2(-0.5, 1.5)
+position = Vector2(356.5, 22)
 shape = SubResource("RectangleShape2D_ld6u2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1352087398]
 script = ExtResource("3_itj2y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=559476742]
-position = Vector2(0, 0.5)
+position = Vector2(355.5, 22.5)
 shape = SubResource("RectangleShape2D_itj2y")
