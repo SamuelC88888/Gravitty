@@ -6,10 +6,18 @@
 script = ExtResource("1_en1eo")
 
 [node name="Button" type="Button" parent="." unique_id=471879442]
-offset_left = 345.0
-offset_top = 3.0
-offset_right = 772.0
-offset_bottom = 171.0
+offset_left = 111.0
+offset_top = 20.0
+offset_right = 538.0
+offset_bottom = 188.0
 text = "Level 1"
 
+[node name="Button2" type="Button" parent="." unique_id=675152272]
+offset_left = 632.0
+offset_top = 26.0
+offset_right = 1017.0
+offset_bottom = 188.0
+text = "Level 2"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://7nyvd2m6ov6i"]
+
+[ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="1_arsda"]
+[ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="2_dgq3b"]
+[ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_bcgyv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbld2"]
+size = Vector2(88, 11034.5)
+
+[node name="Level 2" type="Node2D" unique_id=728217976]
+
+[node name="Branches" parent="." unique_id=1784888609 instance=ExtResource("1_arsda")]
+position = Vector2(248.99997, 1438)
+
+[node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("2_dgq3b")]
+
+[node name="Wall 1" type="StaticBody2D" parent="." unique_id=1689380305]
+position = Vector2(-2201, 2434)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall 1" unique_id=1715878722]
+position = Vector2(1375.5, 3053.501)
+scale = Vector2(0.8515624, 86.22656)
+texture = ExtResource("3_bcgyv")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 1" unique_id=2052059662]
+position = Vector2(1382, 3040.25)
+shape = SubResource("RectangleShape2D_fbld2")
+
+[node name="Wall 2" type="StaticBody2D" parent="." unique_id=534070937]
+position = Vector2(-621, 2421)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall 2" unique_id=1696616514]
+position = Vector2(1375.5, 3053.501)
+scale = Vector2(0.8515624, 86.22656)
+texture = ExtResource("3_bcgyv")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 2" unique_id=296814887]
+position = Vector2(1382, 3040.25)
+shape = SubResource("RectangleShape2D_fbld2")

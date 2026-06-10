@@ -3,11 +3,10 @@ class_name apple
 
 const SPEED = 650
 const JUMP_VELOCITY = -400.0
-var maxhp = 8000
-var current_hp = 8000
-var vdamage = velocity.y
+var current_hp = 4000
 var speed_int 
-signal branch_break
+
+var max_speed = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -30,15 +29,17 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	speed_int = int(velocity.y)
+	#print(str(speed_int))
 
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is Branch:
 		current_hp -= speed_int 
-		current_hp = clamp(current_hp,0,maxhp)
 		print("ouch! Hp =:",current_hp)
 		print("damage ",speed_int)
 		if current_hp <= 0:
 			get_tree().change_scene_to_file("res://Levels/start_screens.tscn")
-		emit_signal("branch_break")
+		area.get_parent().queue_free()
+	if area is safe_branch:
+		velocity.y -= 2000
