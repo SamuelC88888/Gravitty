@@ -12,4 +12,12 @@ offset_right = 841.0
 offset_bottom = 408.0
 text = "Go back to main menu"
 
+[node name="Label" type="Label" parent="." unique_id=1407344884]
+offset_left = 255.0
+offset_top = 67.0
+offset_right = 896.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 64
+text = "Try harder next time"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

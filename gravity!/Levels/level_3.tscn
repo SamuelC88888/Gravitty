@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bkecpe1hd2gsk"]
+
+[ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_ej5lj"]
+[ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="2_absw3"]
+[ext_resource type="PackedScene" uid="uid://bckaqwpm2ceai" path="res://Key elements/area_2d.tscn" id="3_padch"]
+
+[node name="Level 3" type="Node2D" unique_id=870915413]
+
+[node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_ej5lj")]
+
+[node name="Branches" parent="." unique_id=1784888609 instance=ExtResource("2_absw3")]
+position = Vector2(1373.0001, 111.999985)
+
+[node name="Area2D" parent="." unique_id=150673469 instance=ExtResource("3_padch")]
+position = Vector2(-281, 1227)

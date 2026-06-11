@@ -11,6 +11,7 @@ script = ExtResource("1_rdjab")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1242707978]
 position = Vector2(542.5, 0)
+rotation = -3.1327388
 scale = Vector2(9.4765625, 1)
 texture = ExtResource("1_c8aka")
 

@@ -6,18 +6,30 @@
 script = ExtResource("1_en1eo")
 
 [node name="Button" type="Button" parent="." unique_id=471879442]
-offset_left = 111.0
-offset_top = 20.0
-offset_right = 538.0
-offset_bottom = 188.0
-text = "Level 1"
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 452.0
+offset_bottom = 185.0
+text = "Level 1
+(Damaging branches)"
 
 [node name="Button2" type="Button" parent="." unique_id=675152272]
-offset_left = 632.0
+offset_left = 475.0
 offset_top = 26.0
-offset_right = 1017.0
+offset_right = 860.0
 offset_bottom = 188.0
-text = "Level 2"
+text = "Level 2
+(Slowing Branches)
+"
+
+[node name="Button3" type="Button" parent="." unique_id=52418310]
+offset_left = 18.0
+offset_top = 209.0
+offset_right = 456.0
+offset_bottom = 363.0
+text = "Level 3
+(All of the above)"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

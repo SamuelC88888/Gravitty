@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="2_kuhjn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32yen"]
-radius = 70.71068
+radius = 86.023254
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x7be1"]
 radius = 70.0
@@ -22,8 +22,8 @@ texture = ExtResource("2_kuhjn")
 shape = SubResource("CircleShape2D_32yen")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=907346444]
-position = Vector2(0, -2)
-zoom = Vector2(0.2, 0.2)
+position = Vector2(-1, -2)
+zoom = Vector2(0.1, 0.1)
 
 [node name="Apple_hitbox" type="CollisionShape2D" parent="." unique_id=537819501]
 shape = SubResource("CircleShape2D_x7be1")

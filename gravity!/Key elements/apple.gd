@@ -3,7 +3,7 @@ class_name apple
 
 const SPEED = 650
 const JUMP_VELOCITY = -400.0
-var current_hp = 4000
+var current_hp = 3500
 var speed_int 
 
 var max_speed = 0
@@ -48,4 +48,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if speed_int >= 4000:
 			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 		else:
-			get_tree().change_scene_to_file("res://Levels/start_screens.tscn")
+			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+
+
+func _on_ending_1_body_entered(body: Node2D) -> void:
+	if body is apple:
+		get_tree().change_scene_to_file("res://Levels/completion.tscn")

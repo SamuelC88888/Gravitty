@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b2yetjl0i0s0w"]
+
+[ext_resource type="Script" uid="uid://dinqptp482gko" path="res://Levels/completion.gd" id="1_hdsvq"]
+
+[node name="Completion" type="Node2D" unique_id=1438406809]
+script = ExtResource("1_hdsvq")
+
+[node name="Button" type="Button" parent="." unique_id=517642911]
+offset_left = 379.0
+offset_top = 206.0
+offset_right = 727.0
+offset_bottom = 368.0
+text = "Return to main menu"
+
+[node name="Label" type="Label" parent="." unique_id=2056631753]
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 934.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 64
+text = "             Congrats!
+You completed the level"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
