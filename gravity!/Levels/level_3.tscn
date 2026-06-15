@@ -2,14 +2,88 @@
 
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_ej5lj"]
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="2_absw3"]
-[ext_resource type="PackedScene" uid="uid://bckaqwpm2ceai" path="res://Key elements/area_2d.tscn" id="3_padch"]
+[ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="4_absw3"]
+[ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/static_body_2d.tscn" id="4_padch"]
+[ext_resource type="Script" uid="uid://dth7lo11x7lcr" path="res://Levels/Ending.gd" id="5_padch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_padch"]
+size = Vector2(192.00046, 145016.31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwxw1"]
+size = Vector2(1507, 130)
 
 [node name="Level 3" type="Node2D" unique_id=870915413]
+metadata/_edit_horizontal_guides_ = [-5206.0]
 
 [node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_ej5lj")]
+position = Vector2(142, -394)
 
 [node name="Branches" parent="." unique_id=1784888609 instance=ExtResource("2_absw3")]
-position = Vector2(1373.0001, 111.999985)
+position = Vector2(368, 1954)
 
-[node name="Area2D" parent="." unique_id=150673469 instance=ExtResource("3_padch")]
-position = Vector2(-281, 1227)
+[node name="Branches4" parent="." unique_id=671650995 instance=ExtResource("2_absw3")]
+position = Vector2(-502.99994, 11199.999)
+
+[node name="Branches2" parent="." unique_id=250893642 instance=ExtResource("2_absw3")]
+position = Vector2(-596.9999, 5715)
+
+[node name="Branches3" parent="." unique_id=517447465 instance=ExtResource("2_absw3")]
+position = Vector2(-641.99994, 3078)
+
+[node name="Wall 1" type="StaticBody2D" parent="." unique_id=178292226]
+position = Vector2(-1179, 227)
+scale = Vector2(0.4, 0.1)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall 1" unique_id=1639205583]
+position = Vector2(1363.75, 66922.5)
+scale = Vector2(1.035155, 1084.1797)
+texture = ExtResource("4_absw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 1" unique_id=444494641]
+position = Vector2(1368.4996, 64440.516)
+scale = Vector2(0.9999986, 0.9999986)
+shape = SubResource("RectangleShape2D_padch")
+
+[node name="Wall 2" type="StaticBody2D" parent="." unique_id=1739821043]
+position = Vector2(418.00006, 190)
+scale = Vector2(0.4, 0.1)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall 2" unique_id=1105747787]
+position = Vector2(1363.75, 67222.49)
+scale = Vector2(1.035155, 1088.8671)
+texture = ExtResource("4_absw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 2" unique_id=544212918]
+position = Vector2(1396.4998, 64541.906)
+scale = Vector2(0.99999887, 0.99999887)
+shape = SubResource("RectangleShape2D_padch")
+
+[node name="Safe branch2" parent="." unique_id=678059459 instance=ExtResource("4_padch")]
+position = Vector2(-796, 853)
+
+[node name="Area2D2" type="Area2D" parent="Safe branch2" unique_id=2014554022]
+position = Vector2(980, 12956)
+script = ExtResource("5_padch")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Safe branch2/Area2D2" unique_id=225059866]
+position = Vector2(-22.5, 0)
+scale = Vector2(11.8046875, 1)
+texture = ExtResource("4_absw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Safe branch2/Area2D2" unique_id=1141309497]
+position = Vector2(-24.5, 3)
+shape = SubResource("RectangleShape2D_uwxw1")
+
+[node name="Safe branch3" parent="." unique_id=831505400 instance=ExtResource("4_padch")]
+position = Vector2(-722, 8861)
+
+[node name="Label" type="Label" parent="." unique_id=1084636687]
+offset_left = -911.0
+offset_top = -65.0
+offset_right = 1242.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 100
+text = "Hint: Make sure you slow down for the finish"

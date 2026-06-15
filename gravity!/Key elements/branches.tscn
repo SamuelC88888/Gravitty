@@ -8,7 +8,7 @@
 size = Vector2(1460.5009, 1120.0007)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omt3p"]
-size = Vector2(1466.252, 1105.0013)
+size = Vector2(1466.252, 1530.0024)
 
 [node name="Branches" type="StaticBody2D" unique_id=1784888609]
 scale = Vector2(0.4, 0.1)
@@ -28,8 +28,8 @@ shape = SubResource("RectangleShape2D_wgnx3")
 script = ExtResource("3_omt3p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="branch" unique_id=740267899]
-position = Vector2(734.9999, 282.4998)
-scale = Vector2(0.9999985, 0.9999985)
+position = Vector2(734.9999, 114.99994)
+scale = Vector2(0.9999983, 0.9999983)
 shape = SubResource("RectangleShape2D_omt3p")
 
 [connection signal="body_entered" from="branch" to="." method="_on_body_entered"]

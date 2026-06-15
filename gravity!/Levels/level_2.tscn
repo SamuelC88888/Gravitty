@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dth7lo11x7lcr" path="res://Levels/Ending.gd" id="5_bcgyv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbld2"]
-size = Vector2(88, 11034.5)
+size = Vector2(88, 12047.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s275v"]
 size = Vector2(1507, 130)
@@ -29,13 +29,12 @@ position = Vector2(-2201, 2434)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Wall 1" unique_id=1715878722]
-position = Vector2(1375.5, 3053.501)
-scale = Vector2(0.8515624, 86.22656)
+position = Vector2(1375.5, 3384.5005)
+scale = Vector2(0.8515624, 91.39843)
 texture = ExtResource("3_bcgyv")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 1" unique_id=2052059662]
-position = Vector2(1382, 3040.25)
+position = Vector2(1382, 3383)
 shape = SubResource("RectangleShape2D_fbld2")
 
 [node name="Wall 2" type="StaticBody2D" parent="." unique_id=534070937]
@@ -43,20 +42,19 @@ position = Vector2(-621, 2421)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Wall 2" unique_id=1696616514]
-position = Vector2(1375.5, 3053.501)
-scale = Vector2(0.8515624, 86.22656)
+position = Vector2(1375.5, 3380.0005)
+scale = Vector2(0.8515624, 91.32812)
 texture = ExtResource("3_bcgyv")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 2" unique_id=296814887]
-position = Vector2(1382, 3040.25)
+position = Vector2(1382, 3204.125)
 shape = SubResource("RectangleShape2D_fbld2")
 
 [node name="Safe branch" parent="." unique_id=678059459 instance=ExtResource("4_bcgyv")]
 position = Vector2(-732, 1933)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1966930449]
-position = Vector2(-4, 10926)
+position = Vector2(-3, 11608)
 script = ExtResource("5_bcgyv")
 metadata/_edit_group_ = true
 

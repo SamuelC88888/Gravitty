@@ -43,9 +43,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.get_parent().queue_free()
 	if area is safe_branch:
 		speed_int = 250
+		
 		area.get_parent().queue_free()
 	if area is ending:
-		if speed_int >= 4000:
+		if speed_int >= 2500:
 			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Levels/completion.tscn")
