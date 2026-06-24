@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="2_absw3"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="4_absw3"]
 [ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/static_body_2d.tscn" id="4_padch"]
-[ext_resource type="Script" uid="uid://dth7lo11x7lcr" path="res://Levels/Ending.gd" id="5_padch"]
+[ext_resource type="Script" uid="uid://b8kp86rh5ujbk" path="res://Levels/area_2d.gd" id="5_padch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_padch"]
 size = Vector2(192.00046, 145016.31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwxw1"]
-size = Vector2(1507, 130)
+size = Vector2(1533, 150)
 
 [node name="Level 3" type="Node2D" unique_id=870915413]
 metadata/_edit_horizontal_guides_ = [-5206.0]
@@ -63,20 +63,6 @@ shape = SubResource("RectangleShape2D_padch")
 [node name="Safe branch2" parent="." unique_id=678059459 instance=ExtResource("4_padch")]
 position = Vector2(-796, 853)
 
-[node name="Area2D2" type="Area2D" parent="Safe branch2" unique_id=2014554022]
-position = Vector2(980, 12956)
-script = ExtResource("5_padch")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Safe branch2/Area2D2" unique_id=225059866]
-position = Vector2(-22.5, 0)
-scale = Vector2(11.8046875, 1)
-texture = ExtResource("4_absw3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Safe branch2/Area2D2" unique_id=1141309497]
-position = Vector2(-24.5, 3)
-shape = SubResource("RectangleShape2D_uwxw1")
-
 [node name="Safe branch3" parent="." unique_id=831505400 instance=ExtResource("4_padch")]
 position = Vector2(-722, 8861)
 
@@ -87,3 +73,17 @@ offset_right = 1242.0
 offset_bottom = 72.0
 theme_override_font_sizes/font_size = 100
 text = "Hint: Make sure you slow down for the finish"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1828231741]
+position = Vector2(-15, 13844)
+script = ExtResource("5_padch")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=669774248]
+position = Vector2(169.50003, 0)
+scale = Vector2(11.9765625, 1)
+texture = ExtResource("4_absw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=172820560]
+position = Vector2(165.5, -13)
+shape = SubResource("RectangleShape2D_uwxw1")

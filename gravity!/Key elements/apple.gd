@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name apple
 
-const SPEED = 650
+const SPEED = 2000
 const JUMP_VELOCITY = -400.0
 var current_hp = 3500
 var speed_int 
@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	speed_int = int(velocity.y)
-	print(str(speed_int))
+	#print(str(speed_int))
 
 
 
@@ -46,10 +46,16 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		
 		area.get_parent().queue_free()
 	if area is ending:
-		if speed_int >= 2500:
+		if speed_int >= 3000:
 			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+	if area is end2:
+		if speed_int >= 3000:
+			get_tree().change_scene_to_file("res://Levels/loser.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+
 
 
 func _on_ending_1_body_entered(body: Node2D) -> void:

@@ -15,22 +15,22 @@ size = Vector2(1056, 119)
 [node name="Level 1" type="Node2D" unique_id=911778341]
 
 [node name="Branches" parent="." unique_id=660265266 instance=ExtResource("1_dilhk")]
-position = Vector2(871.00006, 427.00006)
+position = Vector2(989, 414.00003)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
-position = Vector2(306.00003, 2948.0002)
+position = Vector2(243, 2957)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches3" parent="." unique_id=436768233 instance=ExtResource("1_dilhk")]
-position = Vector2(841.00006, 6209.0005)
+position = Vector2(985.00006, 6209.0005)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
 [node name="Branches4" parent="." unique_id=1639432758 instance=ExtResource("1_dilhk")]
-position = Vector2(363.00003, 9024)
+position = Vector2(247.00003, 9024.001)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 

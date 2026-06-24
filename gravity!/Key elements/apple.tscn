@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c13wixnfn5w4a"]
 
 [ext_resource type="Script" uid="uid://dt5ujtjkyfjtd" path="res://Key elements/apple.gd" id="1_x7be1"]
-[ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="2_kuhjn"]
+[ext_resource type="Texture2D" uid="uid://5fv0tcg1ret6" path="res://Art/Apple (1).png" id="2_x7be1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32yen"]
 radius = 92.0489
@@ -14,7 +14,8 @@ script = ExtResource("1_x7be1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=195528658]
 position = Vector2(0, -2)
-texture = ExtResource("2_kuhjn")
+scale = Vector2(5, 5)
+texture = ExtResource("2_x7be1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1926199673]
 
@@ -23,9 +24,13 @@ shape = SubResource("CircleShape2D_32yen")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=907346444]
 position = Vector2(-1, -2)
-zoom = Vector2(0.1, 0.1)
+zoom = Vector2(0.25, 0.25)
 
 [node name="Apple_hitbox" type="CollisionShape2D" parent="." unique_id=537819501]
 shape = SubResource("CircleShape2D_x7be1")
+
+[node name="TabBar" type="TabBar" parent="." unique_id=665534677]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
