@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dt5ujtjkyfjtd" path="res://Key elements/apple.gd" id="1_x7be1"]
 [ext_resource type="Texture2D" uid="uid://5fv0tcg1ret6" path="res://Art/Apple (1).png" id="2_x7be1"]
+[ext_resource type="Texture2D" uid="uid://cc25fnux2rwhu" path="res://Art/Apple (2).png" id="3_hoa4b"]
+[ext_resource type="Texture2D" uid="uid://citshbdyy7gs0" path="res://Art/Apple (3).png" id="4_lq6v1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32yen"]
 radius = 92.0489
@@ -9,13 +11,35 @@ radius = 92.0489
 [sub_resource type="CircleShape2D" id="CircleShape2D_x7be1"]
 radius = 75.00667
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_tee63"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x7be1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hoa4b")
+}],
+"loop": true,
+"name": &"ui_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lq6v1")
+}],
+"loop": true,
+"name": &"ui_right",
+"speed": 5.0
+}]
+
 [node name="Apple" type="CharacterBody2D" unique_id=2030887307]
 script = ExtResource("1_x7be1")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=195528658]
-position = Vector2(0, -2)
-scale = Vector2(5, 5)
-texture = ExtResource("2_x7be1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1926199673]
 
@@ -32,5 +56,14 @@ shape = SubResource("CircleShape2D_x7be1")
 [node name="TabBar" type="TabBar" parent="." unique_id=665534677]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082532616]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_tee63")
+animation = &"ui_left"
+autoplay = "default"
+
+[node name="Timer" type="Timer" parent="." unique_id=525085561]
+wait_time = 3.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

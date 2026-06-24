@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name apple
 
+@onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 const SPEED = 2000
 const JUMP_VELOCITY = -400.0
 var current_hp = 3500
@@ -24,8 +25,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+		if Input.is_action_just_pressed("ui_left"):
+			animation.play("ui_left")
+		if Input.is_action_just_pressed("ui_right"):
+			animation.play("ui_right")
+		else:
+			Timer.start
+			animation.play("default")
+
 
 	move_and_slide()
+	
+	
 
 func _process(delta: float) -> void:
 	speed_int = int(velocity.y)
