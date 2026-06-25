@@ -27,17 +27,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 		if Input.is_action_just_pressed("ui_left"):
-			animation.play("ui_left")
+			animation.play("left")
 		if Input.is_action_just_pressed("ui_right"):
-			animation.play("ui_right")
-		else:
-			Timer.start
-			animation.play("default")
-
+			animation.play("right")
 
 	move_and_slide()
-	
-	
+
+
 
 func _process(delta: float) -> void:
 	speed_int = int(velocity.y)
@@ -58,12 +54,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		
 		area.get_parent().queue_free()
 	if area is ending:
-		if speed_int >= 3000:
+		if speed_int <= 3000:
 			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Levels/completion.tscn")
 	if area is end2:
-		if speed_int >= 3000:
+		if speed_int <= 3000:
 			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Levels/completion.tscn")

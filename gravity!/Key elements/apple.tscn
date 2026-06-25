@@ -26,16 +26,16 @@ animations = [{
 "texture": ExtResource("3_hoa4b")
 }],
 "loop": true,
-"name": &"ui_left",
-"speed": 5.0
+"name": &"left",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_lq6v1")
 }],
 "loop": true,
-"name": &"ui_right",
-"speed": 5.0
+"name": &"right",
+"speed": 1.0
 }]
 
 [node name="Apple" type="CharacterBody2D" unique_id=2030887307]
@@ -60,8 +60,8 @@ offset_bottom = 40.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082532616]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_tee63")
-animation = &"ui_left"
 autoplay = "default"
+frame_progress = 0.440427
 
 [node name="Timer" type="Timer" parent="." unique_id=525085561]
 wait_time = 3.0
