@@ -60,8 +60,9 @@ offset_bottom = 40.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082532616]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_tee63")
+animation = &"right"
 autoplay = "default"
-frame_progress = 0.440427
+frame_progress = 0.0099688545
 
 [node name="Timer" type="Timer" parent="." unique_id=525085561]
 wait_time = 3.0

@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="1_arsda"]
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="2_dgq3b"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_bcgyv"]
-[ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/static_body_2d.tscn" id="4_bcgyv"]
+[ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/Safebranch.tscn" id="4_bcgyv"]
 [ext_resource type="Script" uid="uid://dth7lo11x7lcr" path="res://Levels/Ending.gd" id="5_bcgyv"]
+[ext_resource type="PackedScene" uid="uid://b210pddwynv2h" path="res://Key elements/SafebranchOposite.tscn" id="6_fbld2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbld2"]
 size = Vector2(88, 12047.75)
@@ -67,12 +68,6 @@ texture = ExtResource("3_bcgyv")
 position = Vector2(-24.5, 3)
 shape = SubResource("RectangleShape2D_s275v")
 
-[node name="Safe branch2" parent="." unique_id=1947746913 instance=ExtResource("4_bcgyv")]
-position = Vector2(51, 9379)
-
-[node name="Safe branch3" parent="." unique_id=1420893019 instance=ExtResource("4_bcgyv")]
-position = Vector2(-6, 4919)
-
 [node name="Label" type="Label" parent="." unique_id=640011061]
 offset_left = -763.0
 offset_top = 1770.0
@@ -80,5 +75,11 @@ offset_right = -182.0
 offset_bottom = 1955.0
 theme_override_font_sizes/font_size = 64
 text = "Hit these branches"
+
+[node name="Safe branch4" parent="." unique_id=1194501258 instance=ExtResource("6_fbld2")]
+position = Vector2(-83, 4760)
+
+[node name="Safe branch2" parent="." unique_id=599694379 instance=ExtResource("6_fbld2")]
+position = Vector2(-108, 9740)
 
 [connection signal="body_entered" from="Area2D" to="Apple" method="_on_body_entered"]

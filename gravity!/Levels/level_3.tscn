@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_ej5lj"]
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="2_absw3"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="4_absw3"]
-[ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/static_body_2d.tscn" id="4_padch"]
+[ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/Safebranch.tscn" id="4_padch"]
 [ext_resource type="Script" uid="uid://b8kp86rh5ujbk" path="res://Levels/area_2d.gd" id="5_padch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_padch"]

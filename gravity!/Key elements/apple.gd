@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	speed_int = int(velocity.y)
-	#print(str(speed_int))
+	print(str(speed_int))
 
 
 
@@ -55,14 +55,14 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.get_parent().queue_free()
 	if area is ending:
 		if speed_int <= 3000:
-			get_tree().change_scene_to_file("res://Levels/loser.tscn")
-		else:
 			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 	if area is end2:
 		if speed_int <= 3000:
-			get_tree().change_scene_to_file("res://Levels/loser.tscn")
-		else:
 			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Levels/loser.tscn")
 
 
 
