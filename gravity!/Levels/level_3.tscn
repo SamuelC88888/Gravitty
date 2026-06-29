@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="4_absw3"]
 [ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/Safebranch.tscn" id="4_padch"]
 [ext_resource type="Script" uid="uid://b8kp86rh5ujbk" path="res://Levels/area_2d.gd" id="5_padch"]
+[ext_resource type="PackedScene" uid="uid://c7k4pwr1gcpnh" path="res://Key elements/branchesoposite.tscn" id="6_uwxw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_padch"]
 size = Vector2(192.00046, 145016.31)
@@ -18,11 +19,8 @@ metadata/_edit_horizontal_guides_ = [-5206.0]
 [node name="Apple" parent="." unique_id=2030887307 instance=ExtResource("1_ej5lj")]
 position = Vector2(142, -394)
 
-[node name="Branches" parent="." unique_id=1784888609 instance=ExtResource("2_absw3")]
-position = Vector2(368, 1954)
-
 [node name="Branches4" parent="." unique_id=671650995 instance=ExtResource("2_absw3")]
-position = Vector2(-502.99994, 11199.999)
+position = Vector2(-415, 11275)
 
 [node name="Branches2" parent="." unique_id=250893642 instance=ExtResource("2_absw3")]
 position = Vector2(-596.9999, 5715)
@@ -61,7 +59,7 @@ scale = Vector2(0.99999887, 0.99999887)
 shape = SubResource("RectangleShape2D_padch")
 
 [node name="Safe branch2" parent="." unique_id=678059459 instance=ExtResource("4_padch")]
-position = Vector2(-796, 853)
+position = Vector2(-709, 875)
 
 [node name="Safe branch3" parent="." unique_id=831505400 instance=ExtResource("4_padch")]
 position = Vector2(-722, 8861)
@@ -87,3 +85,6 @@ texture = ExtResource("4_absw3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=172820560]
 position = Vector2(165.5, -13)
 shape = SubResource("RectangleShape2D_uwxw1")
+
+[node name="Branches" parent="." unique_id=1784888609 instance=ExtResource("6_uwxw1")]
+position = Vector2(370, 1872)

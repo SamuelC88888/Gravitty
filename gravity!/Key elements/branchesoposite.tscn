@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://inw2xmbo67fd"]
+[gd_scene format=3 uid="uid://c7k4pwr1gcpnh"]
 
-[ext_resource type="Script" uid="uid://ceml0kao6q1vd" path="res://Key elements/branches.gd" id="1_wgnx3"]
-[ext_resource type="Texture2D" uid="uid://c6e76f1uk8jth" path="res://Art/unsafebranch.png" id="2_omt3p"]
-[ext_resource type="Script" uid="uid://r7gypkrcdkw8" path="res://Key elements/branch.gd" id="3_omt3p"]
+[ext_resource type="Script" uid="uid://ceml0kao6q1vd" path="res://Key elements/branches.gd" id="1_1in7s"]
+[ext_resource type="Texture2D" uid="uid://c6e76f1uk8jth" path="res://Art/unsafebranch.png" id="2_tnb0u"]
+[ext_resource type="Script" uid="uid://r7gypkrcdkw8" path="res://Key elements/branch.gd" id="3_fkpw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgnx3"]
 size = Vector2(1460.5009, 1120.0007)
@@ -12,12 +12,13 @@ size = Vector2(1466.252, 1770.0028)
 
 [node name="Branches" type="StaticBody2D" unique_id=1784888609]
 scale = Vector2(0.4, 0.1)
-script = ExtResource("1_wgnx3")
+script = ExtResource("1_1in7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2039890836]
 position = Vector2(732.49994, 119.99994)
 scale = Vector2(22.851559, 48.124996)
-texture = ExtResource("2_omt3p")
+texture = ExtResource("2_tnb0u")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=804461946]
 position = Vector2(737.24994, 309.9999)
@@ -25,7 +26,7 @@ scale = Vector2(0.9999992, 0.9999992)
 shape = SubResource("RectangleShape2D_wgnx3")
 
 [node name="branch" type="Area2D" parent="." unique_id=1913906351]
-script = ExtResource("3_omt3p")
+script = ExtResource("3_fkpw4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="branch" unique_id=740267899]
 position = Vector2(722.49994, 140)

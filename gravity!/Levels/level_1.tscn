@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="1_dilhk"]
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_n0qsc"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_3mhv4"]
+[ext_resource type="PackedScene" uid="uid://c7k4pwr1gcpnh" path="res://Key elements/branchesoposite.tscn" id="4_rf6l5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6l5"]
 size = Vector2(88, 11034.5)
@@ -10,22 +11,12 @@ size = Vector2(88, 11034.5)
 [sub_resource type="GDScript" id="GDScript_3mhv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mhv4"]
-size = Vector2(1056, 119)
+size = Vector2(1162, 119)
 
 [node name="Level 1" type="Node2D" unique_id=911778341]
 
-[node name="Branches" parent="." unique_id=660265266 instance=ExtResource("1_dilhk")]
-position = Vector2(989, 414.00003)
-rotation = -0.005030915
-scale = Vector2(0.40386674, 0.100812495)
-
 [node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
 position = Vector2(243, 2957)
-rotation = -0.005030915
-scale = Vector2(0.40386674, 0.100812495)
-
-[node name="Branches3" parent="." unique_id=436768233 instance=ExtResource("1_dilhk")]
-position = Vector2(985.00006, 6209.0005)
 rotation = -0.005030915
 scale = Vector2(0.40386674, 0.100812495)
 
@@ -42,11 +33,11 @@ slide_on_ceiling = false
 position = Vector2(-23, 1531)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall 1" unique_id=2029284276]
-position = Vector2(1382, 3040.25)
+position = Vector2(1547, 3059)
 shape = SubResource("RectangleShape2D_rf6l5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Wall 1" unique_id=1686408268]
-position = Vector2(1375.5, 3053.5007)
+position = Vector2(1555, 3057.9998)
 scale = Vector2(0.8515624, 86.22656)
 texture = ExtResource("3_3mhv4")
 metadata/_edit_group_ = true
@@ -93,12 +84,18 @@ script = SubResource("GDScript_3mhv4")
 position = Vector2(405, 10017)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ending 1" unique_id=471823149]
-position = Vector2(452.99997, 0)
-scale = Vector2(8.484375, 1)
+position = Vector2(490.99997, 0)
+scale = Vector2(9.078125, 1)
 texture = ExtResource("3_3mhv4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ending 1" unique_id=1589383838]
-position = Vector2(436, -1.5)
+position = Vector2(489, -1.5)
 shape = SubResource("RectangleShape2D_3mhv4")
+
+[node name="Branches" parent="." unique_id=1333990732 instance=ExtResource("4_rf6l5")]
+position = Vector2(943, 296)
+
+[node name="Branches3" parent="." unique_id=1552403128 instance=ExtResource("4_rf6l5")]
+position = Vector2(878, 5867)
 
 [connection signal="body_entered" from="Ending 1" to="Apple" method="_on_ending_1_body_entered"]
