@@ -12,4 +12,4 @@ extends AnimatedSprite2D
 
 
 func _on_button_mouse_entered() -> void:
-	animation.play("shake")
+	pass

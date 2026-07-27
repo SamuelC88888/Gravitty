@@ -85,6 +85,7 @@ size = Vector2(881, 238)
 script = ExtResource("1_chcoi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1714929862]
+texture_filter = 1
 position = Vector2(370.99997, -51)
 scale = Vector2(13.812499, 7.6093745)
 sprite_frames = SubResource("SpriteFrames_xka2l")

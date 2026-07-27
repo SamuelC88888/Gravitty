@@ -39,6 +39,7 @@ animations = [{
 }]
 
 [node name="Apple" type="CharacterBody2D" unique_id=2030887307]
+texture_filter = 1
 script = ExtResource("1_x7be1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1926199673]

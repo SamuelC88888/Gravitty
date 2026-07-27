@@ -118,11 +118,6 @@ position = Vector2(-3, 11608)
 script = ExtResource("5_bcgyv")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1759558375]
-position = Vector2(-22.5, 0)
-scale = Vector2(11.8046875, 1)
-texture = ExtResource("3_bcgyv")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=362058373]
 position = Vector2(-24.5, 3)
 shape = SubResource("RectangleShape2D_s275v")
