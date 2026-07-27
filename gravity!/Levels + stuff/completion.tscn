@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2yetjl0i0s0w"]
 
-[ext_resource type="Script" uid="uid://dinqptp482gko" path="res://Levels/completion.gd" id="1_hdsvq"]
+[ext_resource type="Script" uid="uid://dinqptp482gko" path="res://Levels + stuff/completion.gd" id="1_hdsvq"]
 
 [node name="Completion" type="Node2D" unique_id=1438406809]
 script = ExtResource("1_hdsvq")

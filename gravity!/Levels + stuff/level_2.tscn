@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="2_dgq3b"]
 [ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="3_bcgyv"]
 [ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/Safebranch.tscn" id="4_bcgyv"]
-[ext_resource type="Script" uid="uid://dth7lo11x7lcr" path="res://Levels/Ending.gd" id="5_bcgyv"]
+[ext_resource type="Script" uid="uid://dth7lo11x7lcr" path="res://Levels + stuff/Ending.gd" id="5_bcgyv"]
 [ext_resource type="PackedScene" uid="uid://b210pddwynv2h" path="res://Key elements/SafebranchOposite.tscn" id="6_fbld2"]
 [ext_resource type="Texture2D" uid="uid://1hyeumx7equc" path="res://Art/Treewall.png" id="7_s275v"]
 [ext_resource type="Texture2D" uid="uid://bjvl4liv37a1u" path="res://Art/Grassland.png" id="8_pml6m"]
