@@ -12,7 +12,7 @@ size = Vector2(88, 11077.25)
 [sub_resource type="GDScript" id="GDScript_3mhv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mhv4"]
-size = Vector2(1162, 119)
+size = Vector2(1162, 152.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfktq"]
 texture = ExtResource("5_syshm")
@@ -144,7 +144,7 @@ script = SubResource("GDScript_3mhv4")
 position = Vector2(401, 10116)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ending 1" unique_id=1589383838]
-position = Vector2(490, 62)
+position = Vector2(490, 45.25)
 shape = SubResource("RectangleShape2D_3mhv4")
 
 [node name="Branches" parent="." unique_id=1333990732 instance=ExtResource("4_rf6l5")]

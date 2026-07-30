@@ -47,7 +47,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		print("ouch! Hp =:",current_hp)
 		print("damage ",speed_int)
 		if current_hp <= 0:
-			get_tree().change_scene_to_file("res://Levels/loser.tscn")
+			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 		area.get_parent().queue_free()
 	if area is safe_branch:
 		speed_int = 250
@@ -55,17 +55,17 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.get_parent().queue_free()
 	if area is ending:
 		if speed_int <= 3000:
-			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+			get_tree().change_scene_to_file("res://Levels + stuff/completion.tscn")
 		else:
-			get_tree().change_scene_to_file("res://Levels/loser.tscn")
+			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 	if area is end2:
 		if speed_int <= 3000:
-			get_tree().change_scene_to_file("res://Levels/completion.tscn")
+			get_tree().change_scene_to_file("res://Levels + stuff/completion.tscn")
 		else:
-			get_tree().change_scene_to_file("res://Levels/loser.tscn")
+			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 
 
 
 func _on_ending_1_body_entered(body: Node2D) -> void:
 	if body is apple:
-		get_tree().change_scene_to_file("res://Levels/completion.tscn")
+		get_tree().change_scene_to_file("res://Levels + stuff/completion.tscn")

@@ -38,48 +38,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rvmf1"]
-texture = ExtResource("7_32ba1")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_urjih"]
-sources/0 = SubResource("TileSetAtlasSource_rvmf1")
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_urjih"]
 atlas = ExtResource("8_rvmf1")
 region = Rect2(2432, 0, 128, 64)
@@ -224,9 +182,51 @@ animations = [{
 "texture": SubResource("AtlasTexture_upf5i")
 }],
 "loop": false,
-"name": &"default",
-"speed": 5.0
+"name": &"fall",
+"speed": 15.0
 }]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rvmf1"]
+texture = ExtResource("7_32ba1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_urjih"]
+sources/0 = SubResource("TileSetAtlasSource_rvmf1")
 
 [node name="Start Screens" type="Node2D" unique_id=1292311866]
 script = ExtResource("1_en1eo")
@@ -269,21 +269,20 @@ sprite_frames = SubResource("SpriteFrames_17irm")
 animation = &"shake"
 script = ExtResource("6_urjih")
 
+[node name="Name" type="AnimatedSprite2D" parent="." unique_id=1682797896]
+texture_filter = 1
+position = Vector2(791, 97.5)
+scale = Vector2(5.578125, 3.015625)
+sprite_frames = SubResource("SpriteFrames_hvy5v")
+animation = &"fall"
+script = ExtResource("9_urjih")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1544979753]
 texture_filter = 1
 scale = Vector2(6.75, 6.75)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAADAAAAAAADAAEAAAADAAEAAAADAAIAAAAAAAIAAAAEAAEAAAAAAAMAAAAEAAIAAAABAAIAAAAFAAEAAAABAAMAAAAFAAIAAAACAAIAAAAGAAEAAAACAAMAAAAGAAIAAAADAAIAAAAHAAEAAAADAAMAAAAHAAIAAAAAAAQAAAAIAAEAAAAAAAUAAAAIAAIAAAABAAQAAAAJAAEAAAABAAUAAAAJAAIAAAACAAQAAAAKAAEAAAACAAUAAAAKAAIAAAADAAQAAAALAAEAAAADAAUAAAALAAIAAAA=")
 tile_set = SubResource("TileSet_urjih")
 metadata/_edit_lock_ = true
-
-[node name="Name" type="AnimatedSprite2D" parent="." unique_id=1682797896]
-texture_filter = 1
-position = Vector2(791, 97.5)
-scale = Vector2(5.578125, 3.015625)
-sprite_frames = SubResource("SpriteFrames_hvy5v")
-frame = 19
-frame_progress = 1.0
-script = ExtResource("9_urjih")
 
 [connection signal="mouse_entered" from="Button" to="AnimatedSprite2D" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
