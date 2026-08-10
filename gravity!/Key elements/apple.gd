@@ -2,12 +2,19 @@ extends CharacterBody2D
 class_name apple
 
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
+@onready var health_bar = $Healthbar
+@onready var speed_bar = $Speedbar
 const SPEED = 2000
 const JUMP_VELOCITY = -400.0
-var current_hp = 3500
+var current_hp = 3000
 var speed_int 
-
+var speed_val 
 var max_speed = 0
+
+
+func _ready() -> void:
+		health_bar.value = current_hp
+		speed_bar.value = 10 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,10 +33,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-		if Input.is_action_just_pressed("ui_left"):
-			animation.play("left")
-		if Input.is_action_just_pressed("ui_right"):
-			animation.play("right")
+	if Input.is_action_just_pressed("ui_left"):
+		animation.play("left")
+	if Input.is_action_just_pressed("ui_right"):
+		animation.play("right")
 
 	move_and_slide()
 
@@ -38,6 +45,8 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	speed_int = int(velocity.y)
 	print(str(speed_int))
+	health_bar.value = current_hp
+	speed_bar.value = speed_int
 
 
 

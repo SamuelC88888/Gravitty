@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_ej5lj"]
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="2_absw3"]
-[ext_resource type="Texture2D" uid="uid://cqn11d5mchsvj" path="res://icon.svg" id="4_absw3"]
 [ext_resource type="PackedScene" uid="uid://cv20rqt3aepu8" path="res://Key elements/Safebranch.tscn" id="4_padch"]
 [ext_resource type="Script" uid="uid://b8kp86rh5ujbk" path="res://Levels + stuff/area_2d.gd" id="5_padch"]
 [ext_resource type="PackedScene" uid="uid://c7k4pwr1gcpnh" path="res://Key elements/branchesoposite.tscn" id="6_uwxw1"]
@@ -138,11 +137,6 @@ text = "Hint: Make sure you slow down for the finish"
 position = Vector2(-15, 13844)
 script = ExtResource("5_padch")
 metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=669774248]
-position = Vector2(169.50003, 0)
-scale = Vector2(11.9765625, 1)
-texture = ExtResource("4_absw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=172820560]
 position = Vector2(165.5, -13)
