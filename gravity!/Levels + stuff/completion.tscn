@@ -1,24 +1,124 @@
 [gd_scene format=3 uid="uid://b2yetjl0i0s0w"]
 
 [ext_resource type="Script" uid="uid://dinqptp482gko" path="res://Levels + stuff/completion.gd" id="1_hdsvq"]
+[ext_resource type="Texture2D" uid="uid://ca1svkuhtbit8" path="res://Art/completion Screen.png" id="2_mq5ee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfr8l"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeivj"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rygxj"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb2rj"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5alx3"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvwep"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsjwu"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pxup"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5bjl"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn3ng"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stjme"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r37tb"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8lg4"]
+atlas = ExtResource("2_mq5ee")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2ru2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfr8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeivj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rygxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb2rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5alx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvwep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsjwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pxup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5bjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn3ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stjme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r37tb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8lg4")
+}],
+"loop": false,
+"name": &"Newtwonw",
+"speed": 10.0
+}]
 
 [node name="Completion" type="Node2D" unique_id=1438406809]
 script = ExtResource("1_hdsvq")
 
-[node name="Button" type="Button" parent="." unique_id=517642911]
-offset_left = 379.0
-offset_top = 206.0
-offset_right = 727.0
-offset_bottom = 368.0
-text = "Return to main menu"
+[node name="Sceneend" type="AnimatedSprite2D" parent="." unique_id=1825094440]
+texture_filter = 1
+position = Vector2(577, 326.5)
+scale = Vector2(18.03125, 10.234375)
+sprite_frames = SubResource("SpriteFrames_e2ru2")
+animation = &"Newtwonw"
+frame = 12
+frame_progress = 1.0
 
-[node name="Label" type="Label" parent="." unique_id=2056631753]
-offset_left = 192.0
-offset_top = 16.0
-offset_right = 934.0
-offset_bottom = 195.0
-theme_override_font_sizes/font_size = 64
-text = "             Congrats!
-You completed the level"
+[node name="Button" type="Button" parent="." unique_id=517642911]
+offset_left = 89.0
+offset_top = 255.0
+offset_right = 437.0
+offset_bottom = 417.0
+text = "Return to main menu"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

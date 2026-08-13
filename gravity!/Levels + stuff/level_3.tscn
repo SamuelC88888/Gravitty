@@ -91,7 +91,7 @@ metadata/_edit_horizontal_guides_ = [-5206.0]
 position = Vector2(142, -394)
 
 [node name="Branches4" parent="." unique_id=671650995 instance=ExtResource("2_absw3")]
-position = Vector2(-626, 11275)
+position = Vector2(-570, 12380)
 
 [node name="Branches2" parent="." unique_id=250893642 instance=ExtResource("2_absw3")]
 position = Vector2(-596.9999, 5715)
@@ -123,7 +123,7 @@ shape = SubResource("RectangleShape2D_padch")
 position = Vector2(-709, 875)
 
 [node name="Safe branch3" parent="." unique_id=831505400 instance=ExtResource("4_padch")]
-position = Vector2(-762, 8900)
+position = Vector2(-628, 9645)
 
 [node name="Label" type="Label" parent="." unique_id=1084636687]
 offset_left = -911.0
@@ -134,7 +134,7 @@ theme_override_font_sizes/font_size = 100
 text = "Hint: Make sure you slow down for the finish"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1828231741]
-position = Vector2(-15, 13844)
+position = Vector2(-8, 13844)
 script = ExtResource("5_padch")
 metadata/_edit_group_ = true
 
@@ -144,6 +144,9 @@ shape = SubResource("RectangleShape2D_uwxw1")
 
 [node name="Branches" parent="." unique_id=1784888609 instance=ExtResource("6_uwxw1")]
 position = Vector2(501, 1872)
+
+[node name="Branches5" parent="." unique_id=1106449964 instance=ExtResource("6_uwxw1")]
+position = Vector2(449.99997, 7432)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=719938855]
 scale = Vector2(6, 6)
