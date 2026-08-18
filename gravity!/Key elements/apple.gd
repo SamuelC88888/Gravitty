@@ -11,6 +11,8 @@ var speed_int
 var speed_val 
 var max_speed = 0
 
+signal shake
+
 
 func _ready() -> void:
 		health_bar.value = current_hp
@@ -52,6 +54,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is Branch:
+		shake.emit(shake)
 		current_hp -= speed_int 
 		print("ouch! Hp =:",current_hp)
 		print("damage ",speed_int)
@@ -59,6 +62,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 		area.get_parent().queue_free()
 	if area is safe_branch:
+		shake.emit()
 		speed_int = 250
 		
 		area.get_parent().queue_free()
