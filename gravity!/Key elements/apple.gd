@@ -54,7 +54,8 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is Branch:
-		shake.emit(shake)
+		shake.emit(1)
+		shake.emit(1)
 		current_hp -= speed_int 
 		print("ouch! Hp =:",current_hp)
 		print("damage ",speed_int)
@@ -62,6 +63,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 		area.get_parent().queue_free()
 	if area is safe_branch:
+		shake.emit()
 		shake.emit()
 		speed_int = 250
 		
