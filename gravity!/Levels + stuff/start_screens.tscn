@@ -262,21 +262,21 @@ texture = ExtResource("2_l3pnl")
 
 [node name="apple1" type="AnimatedSprite2D" parent="." unique_id=620067863]
 texture_filter = 1
-position = Vector2(593, 278.99997)
+position = Vector2(567, 298)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_17irm")
 animation = &"shake"
 
 [node name="apple2" type="AnimatedSprite2D" parent="." unique_id=109923826]
 texture_filter = 1
-position = Vector2(919.99994, 199.00002)
+position = Vector2(856, 200)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_17irm")
 animation = &"shake"
 
 [node name="apple3" type="AnimatedSprite2D" parent="." unique_id=1187141248]
 texture_filter = 1
-position = Vector2(1074, 417)
+position = Vector2(1062.0001, 360)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_17irm")
 animation = &"shake"
