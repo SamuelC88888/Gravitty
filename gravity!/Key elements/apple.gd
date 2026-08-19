@@ -39,7 +39,9 @@ func _physics_process(delta: float) -> void:
 		animation.play("left")
 	if Input.is_action_just_pressed("ui_right"):
 		animation.play("right")
-
+	else:
+		
+		animation.play("default")
 	move_and_slide()
 
 
