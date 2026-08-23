@@ -39,9 +39,7 @@ func _physics_process(delta: float) -> void:
 		animation.play("left")
 	if Input.is_action_just_pressed("ui_right"):
 		animation.play("right")
-	else:
-		
-		animation.play("default")
+	
 	move_and_slide()
 
 
@@ -72,17 +70,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.get_parent().queue_free()
 	if area is ending:
 		if speed_int <= 3000:
-			Audiomanager.stop("res://Audio/nastelbom-background-music-486996.mp3")
 			get_tree().change_scene_to_file("res://Levels + stuff/completion.tscn")
 		else:
-			Audiomanager.stop("res://Audio/nastelbom-background-music-486996.mp3")
 			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 	if area is end2:
 		if speed_int <= 3000:
-			Audiomanager.stop("res://Audio/nastelbom-background-music-486996.mp3")
 			get_tree().change_scene_to_file("res://Levels + stuff/completion.tscn")
 		else:
-			Audiomanager.stop("res://Audio/nastelbom-background-music-486996.mp3")
 			get_tree().change_scene_to_file("res://Levels + stuff/loser.tscn")
 
 

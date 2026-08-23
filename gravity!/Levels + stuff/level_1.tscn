@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://inw2xmbo67fd" path="res://Key elements/branches.tscn" id="1_dilhk"]
 [ext_resource type="PackedScene" uid="uid://c13wixnfn5w4a" path="res://Key elements/apple.tscn" id="1_n0qsc"]
+[ext_resource type="Script" uid="uid://bmgydjrqh25g6" path="res://Levels + stuff/level_1.gd" id="1_wlaqa"]
 [ext_resource type="PackedScene" uid="uid://c7k4pwr1gcpnh" path="res://Key elements/branchesoposite.tscn" id="4_rf6l5"]
 [ext_resource type="Texture2D" uid="uid://1hyeumx7equc" path="res://Art/Treewall.png" id="5_syshm"]
 [ext_resource type="Texture2D" uid="uid://bjvl4liv37a1u" path="res://Art/Grassland.png" id="6_rfktq"]
@@ -85,6 +86,7 @@ sources/0 = SubResource("TileSetAtlasSource_rfktq")
 sources/3 = SubResource("TileSetAtlasSource_syshm")
 
 [node name="Level 1" type="Node2D" unique_id=911778341]
+script = ExtResource("1_wlaqa")
 
 [node name="Branches2" parent="." unique_id=1784888609 instance=ExtResource("1_dilhk")]
 position = Vector2(243, 2957)

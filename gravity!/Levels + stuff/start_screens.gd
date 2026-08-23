@@ -3,10 +3,13 @@ extends Node2D
 @onready var animationa1 : AnimatedSprite2D = $apple1
 @onready var animationa2 : AnimatedSprite2D = $apple2
 @onready var animationa3 : AnimatedSprite2D = $apple3
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animation.play("fall")
 	Audiomanager.play("res://Audio/nastelbom-background-music-486996.mp3")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
