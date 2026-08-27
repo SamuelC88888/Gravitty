@@ -32,3 +32,10 @@ func _process(delta):
 		available[0].stream = load(queue.pop_front())
 		available[0].play()
 		available.pop_front()
+
+
+
+func stop(id = null) -> void:
+	queue.clear()
+	for player in available:
+		player.stop

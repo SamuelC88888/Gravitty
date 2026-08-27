@@ -67,6 +67,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		shake.emit()
 		speed_int = 250
 		
+		
 		area.get_parent().queue_free()
 	if area is ending:
 		if speed_int <= 3000:
